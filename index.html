@@ -1,114 +1,113 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
 
 <html>
-<head>
-    <title>Zarpo - Criação de Chamados de TI</title>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<!-- Remember to include jQuery :) -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" integrity="sha256-vVnwgKyq3pIb4XdL91l1EC8j7URqDRK8BAWvSnKX0U8=" crossorigin="anonymous"></script>
-	<!-- jQuery Modal -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
-
-
-    <style>
-	    body{
-		    background-color:#211713;
-		    font-family: Roboto;
-			padding: 100px 0;
-	    }
-	    h1, h2{
-		    color:#ffface;
-	    }
-	    .v-align{
-			display: block;
-			width: auto;
-			margin:auto;
-			text-align: center;
-	    }
-	    .img-responsive{
-		    max-width: 100%;
-		    display: inline-block;
-	    }
-	    .tipos-chamados{
-		    max-width: 550px;
-		    display: flex;
-		    justify-content: space-around;
-		    margin:auto;
-	    }
-	    .tipos-chamados a{
-		    color:#211713;
-		    background-color:#ffface;
-		    border-radius:5px;
-		    padding:5px 10px;
-		    text-decoration: none;
-		    text-align: center;
-		    width:120px;
-		    margin-bottom: 15px;
-		    line-height: 1;
-		    padding:10px;
-		    margin:10px;
-	    }
-	    .tipos-chamados a:hover{
-		    background-color:#ece49a;
-		    box-shadow: inset 1px 1px 10px black;
-	    }
-	    .tipos-chamados a i{
-		    font-size: 60px;
-		    display: block;
-		    clear:both;
-		    margin-bottom: 10px;
-	    }
-	    .modal{
-		    max-width: 900px;
-	    }
-	     @media (max-width: 767px){
-		    .tipos-chamados{
-			    flex-direction: column;
-		    }
-		    .tipos-chamaados a{
-			    width: 100%;
-		    }
-		    
-	    }
-    </style>
-</head>
-
-<body>
-	<div class="v-align">
-		<img src="https://mag2.zarpo.com.br/wp-content/uploads/2019/02/zarpo-logo-manutencao.png" alt="Logo Zarpo" class="img-responsive" />
-	    <h1>Criação de Chamados</h1>
-	    
-	    <h2>Para abrir um chamado de suporte de TI preencha o formulário mais adequado:</h2>
-	    
-	    <div class="tipos-chamados">
-		    <a  href="https://zarpo.on.spiceworks.com/portal/tickets" class="trigger"><i class="fa fa-screwdriver"></i> Chamado de Suporte</a>
-		    <a  href="https://form.jotformz.com/90526047958668" class="trigger"><i class="fa fa-user-plus"></i> Entrada de Funcionário</a>
-		    <a  href="https://form.jotformz.com/90526441690659" class="trigger"><i class="fa fa-user-minus"></i> Saída de Funcionário</a>
-		    <a  href="https://form.jotformz.com/90526079912663" class="trigger"><i class="fa fa-laptop"></i> Computador Adicional</a>
-	    </div>
-	</div>
+	<head>
+	    <title>Zarpo - Criação de Chamados de TI</title>
+	    <meta charset="utf-8">
+	    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- Remember to include jQuery :) -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js" integrity="sha256-vVnwgKyq3pIb4XdL91l1EC8j7URqDRK8BAWvSnKX0U8=" crossorigin="anonymous"></script>
+		<!-- jQuery Modal -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
 	
-
-<div id="modal-iframe"> 
-</div>
- 
-<!-- Trigger to open Modal -->
-<a href="https://github.com/dolce/iziModal" class="trigger">Modal</a>
-
-<script>
-	$(document).ready(function(){
-		$("#modal-iframe").iziModal();		
+	
+	    <style>
+		    body{
+			    background-color:#211713;
+			    font-family: Roboto;
+				padding: 100px 0;
+		    }
+		    h1, h2{
+			    color:#ffface;
+		    }
+		    .v-align{
+				display: block;
+				width: auto;
+				margin:auto;
+				text-align: center;
+		    }
+		    .img-responsive{
+			    max-width: 100%;
+			    display: inline-block;
+		    }
+		    .tipos-chamados{
+			    max-width: 550px;
+			    display: flex;
+			    justify-content: space-around;
+			    margin:auto;
+		    }
+		    .tipos-chamados a{
+			    color:#211713;
+			    background-color:#ffface;
+			    border-radius:5px;
+			    padding:5px 10px;
+			    text-decoration: none;
+			    text-align: center;
+			    width:120px;
+			    margin-bottom: 15px;
+			    line-height: 1;
+			    padding:10px;
+			    margin:10px;
+			    cursor: pointer;
+		    }
+		    .tipos-chamados a:hover{
+			    background-color:#ece49a;
+			    box-shadow: inset 1px 1px 10px black;
+		    }
+		    .tipos-chamados a i{
+			    font-size: 60px;
+			    display: block;
+			    clear:both;
+			    margin-bottom: 10px;
+		    }
+		    .modal{
+			    max-width: 900px;
+		    }
+		     @media (max-width: 767px){
+			    .tipos-chamados{
+				    flex-direction: column;
+			    }
+			    .tipos-chamaados a{
+				    width: 100%;
+			    }
+			    
+		    }
+	    </style>
+	</head>
+	
+	<body>
+		<div class="v-align">
+			<img src="https://mag2.zarpo.com.br/wp-content/uploads/2019/02/zarpo-logo-manutencao.png" alt="Logo Zarpo" class="img-responsive" />
+		    <h1>Criação de Chamados</h1>
+		    
+		    <h2>Para abrir um chamado de suporte de TI preencha o formulário mais adequado:</h2>
+		    
+		    <div class="tipos-chamados">
+			    <a data-izimodal-iframeurl="https://zarpo.on.spiceworks.com/portal/tickets"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-screwdriver"></i> Chamado de Suporte</a>
+			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526047958668"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-user-plus"></i> Entrada de Funcionário</a>
+			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526441690659"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-user-minus"></i> Saída de Funcionário</a>
+			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526079912663"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-laptop"></i> Computador Adicional</a>
+		    </div>
+		</div>
 		
-		$(document).on('click', '.trigger', function (event) {
-		    event.preventDefault();
-		    $('#modal-iframe').iziModal('open')
-		});
-
-
-	})
-</script>
-</body>
+		<div id="modal-iframe"> 
+		</div>
+	
+		<script>
+			$(document).ready(function(){
+				$(document).on('click', '.trigger', function (event) {
+				    event.preventDefault();
+					$('#modal-iframe iframe').attr('src', $(this).data('izimodal-iframeurl'));
+					$("#modal-iframe").iziModal({
+					    iframe: true,
+						iframeURL: $(this).data('izimodal-iframeurl'),
+						iframeHeight: 500,
+					});
+				    // or
+				});
+			})
+		</script>
+	</body>
 </html>
