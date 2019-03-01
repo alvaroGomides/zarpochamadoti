@@ -85,27 +85,79 @@
 		    <h2>Para abrir um chamado de suporte de TI preencha o formulário mais adequado:</h2>
 		    
 		    <div class="tipos-chamados">
-			    <a data-izimodal-iframeurl="https://zarpo.on.spiceworks.com/portal/tickets"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-screwdriver"></i> Chamado de Suporte</a>
-			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526047958668"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-user-plus"></i> Entrada de Funcionário</a>
-			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526441690659"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-user-minus"></i> Saída de Funcionário</a>
-			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526079912663"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger"><i class="fa fa-laptop"></i> Computador Adicional</a>
+			    <a data-izimodal-iframeurl="https://zarpo.on.spiceworks.com/portal/tickets"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger-iFrame1"><i class="fa fa-screwdriver"></i> Chamado de Suporte</a>
+			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526047958668"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger-iFrame2"><i class="fa fa-user-plus"></i> Entrada de Funcionário</a>
+			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526441690659"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger-iFrame3"><i class="fa fa-user-minus"></i> Saída de Funcionário</a>
+			    <a data-izimodal-iframeurl="https://form.jotformz.com/90526079912663"  data-izimodal-iframe='true' data-izimodal-open="#modal-iframe" class="trigger-iFrame4"><i class="fa fa-laptop"></i> Computador Adicional</a>
 		    </div>
 		</div>
 		
 		<div id="modal-iframe"> 
 		</div>
+		
+		<div id="modal-iframe2"> 
+		</div>
+		
+		<div id="modal-iframe3"> 
+		</div>
+		
+		<div id="modal-iframe4"> 
+		</div>
 	
 		<script>
 			$(document).ready(function(){
-				$(document).on('click', '.trigger', function (event) {
-				    event.preventDefault();
-					$('#modal-iframe iframe').attr('src', $(this).data('izimodal-iframeurl'));
-					$("#modal-iframe").iziModal({
-					    iframe: true,
-						iframeURL: $(this).data('izimodal-iframeurl'),
-						iframeHeight: 500,
-					});
-				    // or
+
+				$(document).on('click', '.trigger-iFrame1', function(event) {
+				  event.preventDefault();
+				  $('#modal-iFrame1').iziModal('open', this); // Do not forget the "this"
+				});
+				
+				$(document).on('click', '.trigger-iFrame2', function(event) {
+				  event.preventDefault();
+				  $('#modal-iFrame2').iziModal('open', this); // Do not forget the "this"
+				});
+				
+				$(document).on('click', '.trigger-iFrame3', function(event) {
+				  event.preventDefault();
+				  $('#modal-iFrame3').iziModal('open', this); // Do not forget the "this"
+				});
+				
+				$(document).on('click', '.trigger-iFrame4', function(event) {
+				  event.preventDefault();
+				  $('#modal-iFrame4').iziModal('open', this); // Do not forget the "this"
+				});
+				
+				
+				//Modal options
+				$("#modal-iFrame1").iziModal({
+				  title: 'Chamado de Suporte', //Modal title
+				  fullscreen: true, //Icon to expand modal to fullscreen
+				  headerColor: 'rgb(51, 76, 123)', //Color of modal header. Hexa colors allowed.
+				  iframe: true, //In this example, this flag is mandatory. Izimodal needs to understand you will call an iFrame from here
+				  iframeURL: "https://zarpo.on.spiceworks.com/portal/tickets" //Link will be opened inside modal
+				});
+				$("#modal-iFrame2").iziModal({
+				  title: 'Entrada de Funcionário', //Modal title
+				  fullscreen: true, //Icon to expand modal to fullscreen
+				  headerColor: 'rgb(51, 76, 123)', //Color of modal header. Hexa colors allowed.
+				  iframe: true, //In this example, this flag is mandatory. Izimodal needs to understand you will call an iFrame from here
+				  iframeURL: "https://form.jotformz.com/90526047958668" //Link will be opened inside modal
+				});
+				
+				$("#modal-iFrame3").iziModal({
+				  title: 'Saída de Funcionário', //Modal title
+				  fullscreen: true, //Icon to expand modal to fullscreen
+				  headerColor: 'rgb(51, 76, 123)', //Color of modal header. Hexa colors allowed.
+				  iframe: true, //In this example, this flag is mandatory. Izimodal needs to understand you will call an iFrame from here
+				  iframeURL: "https://form.jotformz.com/90526441690659" //Link will be opened inside modal
+				});
+				
+				$("#modal-iFrame4").iziModal({
+				  title: 'Computador Adicional', //Modal title
+				  fullscreen: true, //Icon to expand modal to fullscreen
+				  headerColor: 'rgb(51, 76, 123)', //Color of modal header. Hexa colors allowed.
+				  iframe: true, //In this example, this flag is mandatory. Izimodal needs to understand you will call an iFrame from here
+				  iframeURL: "https://form.jotformz.com/90526079912663" //Link will be opened inside modal
 				});
 			})
 		</script>
